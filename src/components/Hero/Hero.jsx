@@ -3,6 +3,16 @@ import { Container } from 'react-bootstrap';
 import Fade from 'react-reveal/Fade';
 import { Link } from 'react-scroll';
 import PortfolioContext from '../../context/context';
+import Slider from './slider';
+
+const images = [
+  'images/languages/javascript.png',
+  'images/languages/ruby.png',
+  // 'images/languages/node.png',
+  // 'images/languages/react.png',
+  'images/languages/csharp.png',
+];
+
 
 const Header = () => {
   const { hero } = useContext(PortfolioContext);
@@ -29,7 +39,9 @@ const Header = () => {
             {title || 'Hi, my name is'}{' '}
             <span className="text-color-main">{name || 'Your Name'}</span>
             <br />
-            {subtitle || "I'm the Unknown Developer."}
+            {/* {subtitle || "I'm the Unknown Developer."} */}
+            <div style={{ display: `flex` }}>and I'm a <Slider images={images} /> Developer</div>
+
           </h1>
         </Fade>
         <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
@@ -42,6 +54,8 @@ const Header = () => {
           </p>
         </Fade>
       </Container>
+      {/* <Slider images={images} /> */}
+
     </section>
   );
 };
