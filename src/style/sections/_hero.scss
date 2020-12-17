@@ -64,4 +64,11 @@
       }
     }
   }
+
+  @media (max-width: 800px) {  
+    #slider-row {
+      justify-content: center;
+    }
+  }
+
 }
