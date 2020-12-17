@@ -2,6 +2,8 @@ import React from 'react';
 import _ from 'lodash';
 import AwesomeSlider from 'react-awesome-slider';
 import withAutoplay from 'react-awesome-slider/dist/autoplay';
+import SlideImg from '../../Image/SlideImg';
+
 import 'react-awesome-slider/dist/styles.css';
 import './styles.css';
 
@@ -9,13 +11,13 @@ const AutoplaySlider = withAutoplay(AwesomeSlider);
 
 export default (props) => {
 
-    const media = _.map(props.images, (image) => {
+    const media = _.map(props.images, (image, index) => {
         return (
-            <div data-src={image} />
+            <div key={index} data-src={`../../../../${image}`} />
         );
     })
 
-    console.log(media);
+    console.log(media)
 
     return (
         <AutoplaySlider
@@ -24,7 +26,8 @@ export default (props) => {
             showTimer={false}
             bullets={false}
             organicArrows={false}
-            interval={2000}
+            cancelOnInteraction={false}
+            interval={300}
         >
             {media}
         </AutoplaySlider>

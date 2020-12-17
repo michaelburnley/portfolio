@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import App from '../components/App';
-import { headData } from '../data';
+import Resume from '../components/Resume/Resume';
+import { headData } from '../mock/data';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../style/main.scss';
 
@@ -16,7 +16,7 @@ export default () => {
         <html lang={lang || 'en'} />
         <meta name="description" content={description || 'Gatsby Simplefolio'} />
       </Helmet>
-      <App />
+      <Resume />
     </>
   );
 };

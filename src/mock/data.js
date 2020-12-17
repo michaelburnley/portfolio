@@ -13,6 +13,11 @@ export const heroData = {
   name: '',
   subtitle: '',
   cta: '',
+  images: [
+    `languages/javascript.png`,
+    `languages/ruby.png`,
+    `languages/csharp.png`,
+  ],
 };
 
 // ABOUT DATA

@@ -5,18 +5,10 @@ import { Link } from 'react-scroll';
 import PortfolioContext from '../../context/context';
 import Slider from './slider';
 
-const images = [
-  'images/languages/javascript.png',
-  'images/languages/ruby.png',
-  // 'images/languages/node.png',
-  // 'images/languages/react.png',
-  'images/languages/csharp.png',
-];
-
 
 const Header = () => {
   const { hero } = useContext(PortfolioContext);
-  const { title, name, subtitle, cta } = hero;
+  const { title, name, subtitle, cta, images } = hero;
 
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -30,7 +22,6 @@ const Header = () => {
       setIsDesktop(false);
     }
   }, []);
-
   return (
     <section id="hero" className="jumbotron">
       <Container>
