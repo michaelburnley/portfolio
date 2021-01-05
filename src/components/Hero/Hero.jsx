@@ -29,7 +29,6 @@ const Header = () => {
           <h1 className="hero-title">
             {title || 'Hi, my name is'}{' '}<br /><span className="text-color-main">{name || 'Your Name'}</span>
             <br />
-            {/* {subtitle || "I'm the Unknown Developer."} */}
             <div id="slider-row" style={{ display: `flex` }}>and I'm a <Slider images={images} /></div>
             <span className="text-color-main">Developer</span>
 
@@ -41,6 +40,13 @@ const Header = () => {
               <Link to="about" smooth duration={1000}>
                 {cta || 'Know more'}
               </Link>
+            </span>
+          </p>
+          <p className="hero-cta secondary">
+            <span className="cta-btn cta-btn--hero">
+              <a href="/portfolio/" to="/portfolio/">
+                Portfolio
+              </a>
             </span>
           </p>
         </Fade>
